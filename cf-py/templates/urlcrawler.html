@@ -1,0 +1,25 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<div class="jumbotron text-center">
+
+        <h2>URL Crawler!</h2>
+        {% from "includes/_formhelpers.html" import render_field %}
+        <form method="POST" action="">
+            <small class="form-text text-muted">Insira a URL sem http://. Ex.: globo.com</small>
+            <div class="form-group">
+                {{render_field(form.url, class_="form.control")}}
+            </div>
+
+            <small class="form-text text-muted">Dê um nome para a lista de links que será salva.</small>
+            <div class="form-group">
+                    {{render_field(form.nomeDoc, class_="form.control")}}
+            </div>
+
+            <p><input type="submit" class="btn btn-primary" value="Submit"></p>
+
+        </form>
+        
+</div>
+{% endblock %}
+

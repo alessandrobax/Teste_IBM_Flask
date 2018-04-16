@@ -1,0 +1,34 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+ labels:
+   app: cf-py
+ name: cf-py
+ namespace: default
+spec:
+ selector:
+   matchLabels:
+     app: cf-py
+ replicas: 1
+ template:
+   metadata:
+     labels:
+       app: cf-py
+   spec:
+     containers:
+     - image: registry.ng.bluemix.net/abaximg/cf-py:latest
+       name: cf-py
+---
+apiVersion: v1
+kind: Service
+metadata:
+ name: cf-py-nodeport
+ labels:
+   app: cf-py
+spec:
+ selector:
+   app: cf-py
+ type: NodePort
+ ports:
+  - port: 5000
+    nodePort: 31285

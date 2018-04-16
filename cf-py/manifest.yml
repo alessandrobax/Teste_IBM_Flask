@@ -1,0 +1,6 @@
+---
+applications:
+- name: app-alessandro
+  memory: 128M
+  instances: 2
+  health-check-type: port

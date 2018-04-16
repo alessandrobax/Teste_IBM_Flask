@@ -1,0 +1,15 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<div class="jumbotron text-center">
+    <h2>URLs Recuperadas:</h2>
+        <ul class="list-group">
+        {% for document in documents %}
+          <li class="list-group-item active">{{document.tabela}}</li>
+          {% for links in document.links %} 
+          <li class="list-group-item">{{links}}</li>
+          {% endfor %}
+        </ul>
+        {% endfor %}
+</div>
+{% endblock %}
