@@ -31,7 +31,7 @@ A aplicação foi hospedada na IBM Cloud.
 
 -------------------------------------------------------------------------
 
-#Para testar em localhost:
+Para testar em localhost:
 
  - Instale Python 3 /
  - No terminal digite o comando: pip install -r requirements.txt /
@@ -39,16 +39,18 @@ A aplicação foi hospedada na IBM Cloud.
  
 -------------------------------------------------------------------------
 
-#Para rodar a aplicação em container:
-1- Acesse a pasta cf-py
-2- No cluster (Kubernet) faça o upload do arquivo cf-py.yaml
+Para rodar a aplicação em container:
+
+ - Acesse a pasta cf-py
+ - No cluster (Kubernet) faça o upload do arquivo cf-py.yaml
 
 -------------------------------------------------------------------------
 
-#Para publicar na IBM Cloud:
-1- cf login
-2- cf push :)
+Para publicar na IBM Cloud:
 
-Obrigado!
+ - cf login
+ - cf push :)
+
+
 
 
