@@ -29,16 +29,23 @@ Ela está disponível no link: http://app-alessandro.mybluemix.net/
 Obs: A estrutura do teste unitário foi criada, mas não foi implementada, pois não consegui terminar no prazo.
 A aplicação foi hospedada na IBM Cloud.
 
-Para testar em localhost:
-1- Instale Python 3
-2- No terminal digite o comando: pip install -r requirements.txt
-3- No terminal digite o comando: python app.py
+-------------------------------------------------------------------------
 
-Para rodar a aplicação em container:
+#Para testar em localhost:
+
+ - Instale Python 3 /
+ - No terminal digite o comando: pip install -r requirements.txt /
+ - No terminal digite o comando: python app.py /
+ 
+-------------------------------------------------------------------------
+
+#Para rodar a aplicação em container:
 1- Acesse a pasta cf-py
 2- No cluster (Kubernet) faça o upload do arquivo cf-py.yaml
 
-Para publicar na IBM Cloud:
+-------------------------------------------------------------------------
+
+#Para publicar na IBM Cloud:
 1- cf login
 2- cf push :)
 
