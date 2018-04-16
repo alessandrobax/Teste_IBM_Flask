@@ -1,6 +1,7 @@
 import urllib
 from bs4 import BeautifulSoup
 import json
+import os
 
 from cloudant.client import Cloudant
 from cloudant.error import CloudantException
@@ -10,6 +11,8 @@ from wtforms import Form, TextField, TextAreaField, validators, StringField, Sub
 
 
 app = Flask(__name__)
+
+port = int(os.getenv("PORT"))
 
 #Conexao com Cloudant
 serviceUsername = "e50789af-0965-4379-87c4-f7f145beccd0-bluemix"
@@ -68,6 +71,4 @@ class URLform(Form):
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
-
-app.run(debug=True)
+    app.run(host='0.0.0.0', port=port)
