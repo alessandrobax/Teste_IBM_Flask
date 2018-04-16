@@ -12,7 +12,8 @@ from wtforms import Form, TextField, TextAreaField, validators, StringField, Sub
 
 app = Flask(__name__)
 
-port = int(os.getenv("PORT"))
+#Descomente para publicar na IBM Cloud
+#port = int(os.getenv("PORT"))
 
 #Conexao com Cloudant
 serviceUsername = "e50789af-0965-4379-87c4-f7f145beccd0-bluemix"
@@ -71,5 +72,8 @@ class URLform(Form):
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=port, debug='TRUE')
+    #Substitua a linha abaixo para publicar na IBM Cloud
+    #app.run(host='0.0.0.0', port=port, debug='TRUE')
+    app.run(debug='TRUE')
+    
 
